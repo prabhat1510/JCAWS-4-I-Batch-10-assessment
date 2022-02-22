@@ -1,5 +1,6 @@
 package main.services;
 
+import java.util.Collection;
 import java.util.List;
 
 import main.dao.UserDao;
@@ -16,7 +17,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getUserByUsernameAndPassword(String username, String password) throws UserNotFoundException {
 		User user = userDao.getUserByUsernameAndPassword(username, password);
-		if (user == null) {
+		if (user.getUsername() == null || user.getPassword() == null) {
 			throw new UserNotFoundException("username (or) password is incorrect");
 		}
 		return user;
