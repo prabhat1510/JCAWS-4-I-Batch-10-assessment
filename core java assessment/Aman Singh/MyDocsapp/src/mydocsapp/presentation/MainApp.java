@@ -2,6 +2,7 @@ package mydocsapp.presentation;
 
 import java.util.Scanner;
 
+import mydocsapp.dao.UserDAOImpl;
 import mydocsapp.exception.UserNotFoundException;
 
 public class MainApp {
@@ -25,7 +26,11 @@ public class MainApp {
 			System.out.println("Hello " + username);
 			if(PASSWORD.equals(pass)&&(USERNAME.equals(user)))
 			{
-				System.out.println("Hello "+ username);
+				System.out.println("Hello "+ USERNAME);
+				UserDAOImpl list = new UserDAOImpl();
+				System.out.println("List of users"+ list.getListOfAll());
+				
+				
 			}
 		}
 		else

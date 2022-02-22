@@ -7,8 +7,9 @@ import mydocsapp.dto.User;
 
 public class UserDAOImpl implements UserDAO {
 	
+
 	List<User> userList = new ArrayList<User>();
-	public User getUserById(Integer userId) {
+	public User getListOfAll() {
 		userList.add(new User(1,"Rajesh"));
 		userList.add(new User(2,"Ramesh"));
 		userList.add(new User(3,"Ragvesh"));
@@ -30,6 +31,12 @@ public class UserDAOImpl implements UserDAO {
 	
 	@Override
 	public List<User> getAllUsers() {
+		return null;
+	}
+
+	@Override
+	public User getUserById(Integer userId) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
