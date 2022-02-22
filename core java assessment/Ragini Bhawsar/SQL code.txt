@@ -1,0 +1,15 @@
+create database mydocs;
+
+CREATE TABLE `user` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`username`)
+);
+
+INSERT INTO `mydocs`.`user` (`username`, `password`) VALUES ('RaginiBhawsar', 'Ragini');
+INSERT INTO `mydocs`.`user` (`username`, `password`) VALUES ('ShraddhaBirla', 'Shraddha');
+INSERT INTO `mydocs`.`user` (`username`, `password`) VALUES ('ShubhamPatel', 'Shubham');
+INSERT INTO `mydocs`.`user` (`username`, `password`) VALUES ('SakshiSharma', 'Sakshi');
+
+USE MYDOCS;
+SELECT * FROM USER;
