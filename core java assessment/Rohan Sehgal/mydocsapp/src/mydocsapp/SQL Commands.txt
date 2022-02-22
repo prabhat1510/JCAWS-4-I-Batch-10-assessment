@@ -1,0 +1,22 @@
+mysql> create table Users(
+    -> AadharNo Bigint primary key,
+    -> Name varchar(21),
+    -> UserName varchar(21) unique,
+    -> Password varchar(21),
+    -> Role varchar(21));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> insert into users values(111122223333,"Rohan Sehgal","rohan","rohan123","ADMIN");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into users values(222244449999,"Mohit Sharma","mohit","mohit123","user");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from users;
++--------------+--------------+----------+----------+-------+
+| AadharNo     | Name         | UserName | Password | Role  |
++--------------+--------------+----------+----------+-------+
+| 111122223333 | Rohan Sehgal | rohan    | rohan123 | ADMIN |
+| 222244449999 | Mohit Sharma | mohit    | mohit123 | user  |
++--------------+--------------+----------+----------+-------+
+2 rows in set (0.00 sec)
