@@ -1,0 +1,16 @@
+create database mydocs;
+
+use mydocs;
+CREATE TABLE `user` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`username`)
+);
+
+insert into user(username, password) values("sakshi","Sakshi@26");
+insert into user(username, password) values("rekha","Rekha@28");
+insert into user(username, password) values("seema","Seema@18");
+
+
+ 
+ select * from user;
