@@ -24,13 +24,13 @@ public class UserDAOImpl implements UserDAO {
 			preparedStatement.setString(1, username);
 			preparedStatement.setString(2,password);
 			ResultSet rs = preparedStatement.executeQuery();
-			int row = 0;
+			
 			
 			while(rs.next())
 			{
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));
-				row = preparedStatement.executeUpdate();
+		
 			}
 			String pass = user.getPassword();
 			if(!pass.equals(password))
@@ -40,6 +40,7 @@ public class UserDAOImpl implements UserDAO {
 				System.out.println("Password not matched , try again");
 			}
 			else 
+				
 				return user;
 		
 		
@@ -48,7 +49,7 @@ public class UserDAOImpl implements UserDAO {
 			e.printStackTrace();
 		}
 
-		return null;
+		return user;
 	}
 
 	@Override
