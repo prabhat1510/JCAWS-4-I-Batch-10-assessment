@@ -26,8 +26,12 @@ public class LoginCheckDAOImpl implements LoginCheckDAO {
 			preparedStatement.setString(1, userId);
 			preparedStatement.setString(2, password);
 			ResultSet rs = preparedStatement.executeQuery();
+			
 			if(rs.next()==false) {
 				throw new UserNotFoundException();
+			}else {
+				userCredential.setUserId(rs.getString("userId"));
+				userCredential.setPassword(rs.getString("password"));
 			}
 		} catch (UserNotFoundException unf) {
 			throw unf;
