@@ -18,7 +18,7 @@ public class UserUI {
 		System.out.println("Please Enter your userName and password to Login ");
 		String userId = sc.next();
 		String password = sc.next();
-		UserCredential userCredential = new UserCredential();
+		UserCredential userCredential;
 		try {
 			userCredential = loginCheckService.userLoginToAdmin(userId, password);
 		
