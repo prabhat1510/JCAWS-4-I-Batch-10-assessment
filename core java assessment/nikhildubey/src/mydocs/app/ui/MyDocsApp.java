@@ -32,6 +32,7 @@ public class MyDocsApp {
 				case 1:
 					ops.getAllUser();
 					break;
+				default:System.out.println("Give correct input.");
 				}
 				
 				
