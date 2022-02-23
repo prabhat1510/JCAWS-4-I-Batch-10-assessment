@@ -20,8 +20,9 @@ public class UserUI {
 		
 		
 		User name = userservice.getUserByUsername(userName,password);
-		System.out.println(name);
-		
+		if(name != null) {
+		System.out.println("Hello "+name.getUsername());
+		}
 	}
 
 }
