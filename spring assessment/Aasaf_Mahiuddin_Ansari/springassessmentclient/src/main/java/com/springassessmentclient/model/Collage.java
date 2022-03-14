@@ -52,7 +52,8 @@ public class Collage {
 
 	@Override
 	public String toString() {
-		return "Collage [collegeId=" + collegeId + ", collegeName=" + collegeName + ", address=" + address + "]";
+		return "Collage [collegeId=" + collegeId + ", collegeName=" + collegeName + ", address=" + address
+				+ ", student=" + student + "]";
 	}
 	
 
