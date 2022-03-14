@@ -9,8 +9,7 @@ import javax.persistence.Id;
 	public class College {
 
 		@Id
-		@GeneratedValue
-		@Column
+		@Column(name = "college_id")
 		private Integer collegeId ;
 		private String collegeName;
 		private String address ;
