@@ -1,4 +1,4 @@
-package mydocs.exceptions;
+package myDoc;
 
 public class UserNotFoundException extends Exception {
 
