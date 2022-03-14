@@ -1,4 +1,4 @@
-package springassesment.service;
+package com.example.spring_restproject.service;
 
 import java.util.List;
 
@@ -7,11 +7,11 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import springassesment.entity.Student;
-import springassesment.exception.StudentNotFoundException;
-import springassesment.repository.StudentRepository;
+import com.example.spring_restproject.entity.Student;
+import com.example.spring_restproject.exception.StudentNotFoundException;
+import com.example.spring_restproject.repository.StudentRepository;
 
-@Service("StudentService")
+@Service
 @Transactional
 public class StudentServiceImpl implements StudentService {
 
@@ -32,10 +32,10 @@ public class StudentServiceImpl implements StudentService {
 	public Student retrieveStudentById(Integer studentId) throws StudentNotFoundException {
 		return studentRepository.findById(studentId).orElseThrow(() -> new StudentNotFoundException(studentId));
 	}
-//
+
 //	@Override
 //	public Student retrieveStudentByName(String studentName){
 //		return studentRepository.findStudentByName(studentName);
 //	}
-	
+
 }

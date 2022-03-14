@@ -1,10 +1,6 @@
-package springassesment.controller;
+package com.example.spring_restproject.controller;
 
 import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,12 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import springassesment.entity.Student;
-import springassesment.exception.StudentNotFoundException;
-import springassesment.service.StudentService;
+import com.example.spring_restproject.entity.Student;
+import com.example.spring_restproject.exception.StudentNotFoundException;
+import com.example.spring_restproject.service.StudentService;
 
 // http://localhost:8080/student/students
 @RestController
@@ -43,11 +38,10 @@ public class StudentController {
 			throws StudentNotFoundException {
 		return new ResponseEntity<>(studentService.retrieveStudentById(studentId), HttpStatus.OK);
 	}
-
+//
 //	@GetMapping("/studentByName")
-//	public ResponseEntity<Student> getStudentByName(@RequestParam(value = "sName") String studentName) {
-//		return new ResponseEntity<Student>(studentService.retrieveStudentByName(studentName), HttpStatus.OK);
+//	public ResponseEntity<Student> getStudentByName(@RequestParam(value = "dName") String name) {
+//		return new ResponseEntity<Student>(studentService.retrieveStudentByName(name), HttpStatus.OK);
 //	}
-
 
 }

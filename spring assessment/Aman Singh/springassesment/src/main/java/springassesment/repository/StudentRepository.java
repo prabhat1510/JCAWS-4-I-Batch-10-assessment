@@ -10,8 +10,8 @@ import springassesment.entity.Student;
 @Repository
 public interface StudentRepository extends CrudRepository<Student,Integer> {
 
-	@Query("FROM Student s where s.name=:sName")
-	Student findStudentByName(@Param("sName") String name);
-	
+//	@Query("FROM Student s where s.name=:sName")
+//	Student findStudentByName(@Param("sName") String name);
+//	
 
 }
