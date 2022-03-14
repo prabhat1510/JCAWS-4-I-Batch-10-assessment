@@ -32,10 +32,10 @@ public class StudentServiceImpl implements StudentService {
 	public Student retrieveStudentById(Integer studentId) throws StudentNotFoundException {
 		return studentRepository.findById(studentId).orElseThrow(() -> new StudentNotFoundException(studentId));
 	}
-
-	@Override
-	public Student retrieveStudentByName(String studentName){
-		return studentRepository.findStudentByName(studentName);
-	}
+//
+//	@Override
+//	public Student retrieveStudentByName(String studentName){
+//		return studentRepository.findStudentByName(studentName);
+//	}
 	
 }
