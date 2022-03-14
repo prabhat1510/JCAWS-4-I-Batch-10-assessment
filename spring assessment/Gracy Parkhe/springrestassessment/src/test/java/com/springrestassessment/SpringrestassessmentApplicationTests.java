@@ -20,5 +20,4 @@ class SpringrestassessmentApplicationTests {
 	private StudentRepository studentRepository;
 	private CollegeRepository collegeRepository;
 	
-
 }
