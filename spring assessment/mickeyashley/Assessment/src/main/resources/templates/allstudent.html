@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:each="emp: ${studentList}">
+		<span th:text="${student.studentId}"/> --<span th:text="${student.studentName}"/>
+	</div>
+</body>
+</html>

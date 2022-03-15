@@ -15,6 +15,6 @@ public interface StudentService {
 		
 		public Student retrieveStudentById(Integer studentId) throws StudentNotFoundException;
 
-		public Student retrieveStudentByName(String studentName);
+//		public Student retrieveStudentByName(String studentName);
 
 }

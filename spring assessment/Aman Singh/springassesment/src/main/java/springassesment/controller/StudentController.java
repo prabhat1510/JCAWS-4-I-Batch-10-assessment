@@ -44,10 +44,10 @@ public class StudentController {
 		return new ResponseEntity<>(studentService.retrieveStudentById(studentId), HttpStatus.OK);
 	}
 
-	@GetMapping("/studentByName")
-	public ResponseEntity<Student> getStudentByName(@RequestParam(value = "sName") String studentName) {
-		return new ResponseEntity<Student>(studentService.retrieveStudentByName(studentName), HttpStatus.OK);
-	}
+//	@GetMapping("/studentByName")
+//	public ResponseEntity<Student> getStudentByName(@RequestParam(value = "sName") String studentName) {
+//		return new ResponseEntity<Student>(studentService.retrieveStudentByName(studentName), HttpStatus.OK);
+//	}
 
 
 }
